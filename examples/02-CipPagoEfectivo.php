@@ -11,7 +11,7 @@ try {
   
     $pagoCIP = new Pagoefectivo\PagoEfectivo(array('isProduction'=>false,'bearer' => ""));
 
-    $pagoResult = $pagoCipPagoEfectivo->CipPagoEfectivo->create(
+    $pagoResult = $pagoCIP->CipPagoEfectivo->create(
         array(
             "currency" => "PEN",
             "amount" => "160.35",

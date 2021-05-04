@@ -1,7 +1,7 @@
 {
   "name": "leonardcodep/pagoefectivoperu-php",
   "description": "Cliente Pago efectivo-perú API para PHP",
-  "keywords": ["Pagoefectivo", "client", "api", "peru", "php", "payments", "pagos"],
+  "keywords": ["Pagoefectivo", "client", "api", "peru", "php", "payments", "pagos", "laravel"],
   "homepage": "https://github.com/leonardcodep/pagoefectivoperu-php",
   "type": "library",
   "license": "MIT",

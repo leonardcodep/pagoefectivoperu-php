@@ -12,27 +12,24 @@ try {
         )
     );
 
-    // REALIZANDO PAFO 
-    $pagoCIP = new Pagoefectivo\PagoEfectivo(array('isProduction'=>false,'bearer' => $autorizacion->data->token));
-
-    $pagoResult = $pagoCipPagoEfectivo->CipPagoEfectivo->create(
-        array(
-            "currency" => "PEN",
-            "amount" => "160.35",
-            "transactionCode" => "1345",
-            "dateExpiry" => 50,
-            "userEmail" => "user@example.com",
-            // "userDocumentType" => "DNI",
-            // "userDocumentNumbe" => "75852565",
-            // "userCountry" => "Perú",
-            // "paymentConcept" => "Por venta de celular lenovo"
-        )
-    );
-
-
-
+    // REALIZANDO PAGO
     if($autorizacion->code == "100" ){
         // echo $autorizacion->data->token;
+        $pagoCIP = new Pagoefectivo\PagoEfectivo(array('isProduction'=>false,'bearer' => $autorizacion->data->token));
+
+        $pagoResult = $pagoCIP->CipPagoEfectivo->create(
+            array(
+                "currency" => "PEN",
+                "amount" => "160.35",
+                "transactionCode" => "1345",
+                "dateExpiry" => 50,
+                "userEmail" => "user@example.com",
+                // "userDocumentType" => "DNI",
+                // "userDocumentNumbe" => "75852565",
+                // "userCountry" => "Perú",
+                // "paymentConcept" => "Por venta de celular lenovo"
+            )
+        );
     }
    
     // $myJSON = json_encode($autorizacion);
