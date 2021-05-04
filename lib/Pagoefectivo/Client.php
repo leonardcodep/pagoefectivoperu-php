@@ -84,7 +84,6 @@ class Client {
     public function requestCIP($method, $url, $pagoefectivo, $info = NULL ) {
       
         $isProductions = $pagoefectivo->isProduction;
-
         try {
           
             $data = array(
@@ -151,12 +150,10 @@ class Client {
         throw new Errors\UnhandledError($response->body, $response->status_code);
     }
     private function todayDay(){
-        date_default_timezone_set("America/Lima");
         $fechaAutorizacion= date_create('now', timezone_open('America/Lima'));
         return date_format($fechaAutorizacion,DATE_ATOM);
     }
     private function dateExpiry($TiempoExpiracionPago=50){
-        date_default_timezone_set("America/Lima");
         $fechaAutorizacion= date_create('now', timezone_open('America/Lima'));
         $fechaAutorizacion->add(new \DateInterval('PT'. $TiempoExpiracionPago .'H'));
         return date_format($fechaAutorizacion,DATE_ATOM);

@@ -15,7 +15,7 @@ class PagoEfectivo
     /**
     * La versión de API usada
     */
-    const API_VERSION = "v0.0.1";
+    const API_VERSION = "V0.0.1";
     /**
      * La URL Base por defecto
      */

@@ -98,9 +98,10 @@ try {
 
     $pagoResult = $pagoCIP->CipPagoEfectivo->create(
         array(
-            "currency" => "PEN", // OR USD
-            "amount" => 160.35,
+            "currency" => "PEN", // PEN (soles) OR USD (Dólares)
+            "amount" => 160.35, // El Monto de la operación. El separador es un "." 16 dígitos numéricos 2 dígitos decimales
             "transactionCode" => 1345, // EL ID DE TU PEDIDO DE TU SISTEMA
+            // "dateExpiry" => 10, // default 50
             // "paymentConcept" => "Venta de zapatillas", //(OPCIONAL)
             // "additionalData" => "Venta por verano", //(OPCIONAL)
             // "adminEmail" => "venta@mitienda.com", //(OPCIONAL)
