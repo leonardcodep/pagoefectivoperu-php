@@ -1,0 +1,18 @@
+{
+  "name": "leonardcodep/pagoefectivoperu-php",
+  "description": "Cliente Pago efectivo-perú API para PHP",
+  "keywords": ["Pagoefectivo", "client", "api", "peru", "php", "payments", "pagos"],
+  "homepage": "https://github.com/leonardcodep/pagoefectivoperu-php",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": "^7.2",
+    "rmccue/requests": "^1.8.0"
+  },
+  "require-dev": {
+      "phpunit/phpunit": "4.4.* || 4.8.* || 9.5.*"
+  },
+  "autoload": {
+    "classmap": ["lib/Pagoefectivo/"]
+  }
+}
